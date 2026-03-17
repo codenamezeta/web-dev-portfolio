@@ -1,0 +1,54 @@
+# Project Context
+
+This project is a personal web development portfolio for Michael, a freelance web developer and technology consultant (A2Zeta Solutions). The goal is to showcase technical expertise, projects, and professional experience through a high-performance, accessible, and visually striking modern web application.
+
+# Tech Stack
+
+- Framework: Next.js (Version 16 - App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- UI Components: shadcn/ui
+- Icons: Lucide React
+- Animations: Framer Motion & ReactBits
+
+# Core AI Directives
+
+## 1. UI Component Prioritization (Strict Rule)
+
+- ALWAYS check if a UI element can be built using an existing `shadcn/ui` component before writing custom Tailwind/HTML from scratch.
+- Use `shadcn/ui` for buttons, cards, dialogs, forms, inputs, navigation menus, and dropdowns.
+- When generating a component that requires a new shadcn element, explicitly state the CLI command needed to install it (e.g., `npx shadcn-ui@latest add [component]`).
+
+## 2. Responsiveness & Mobile-First Design
+
+- Every component and page layout MUST be fully responsive.
+- Use Tailwind's mobile-first breakpoints (default, `sm:`, `md:`, `lg:`, `xl:`).
+- Ensure touch targets on mobile (buttons, links) are accessible (at least 44x44px).
+- Avoid horizontal scrolling issues by utilizing `overflow-hidden` or responsive container widths.
+
+## 3. Dark & Light Mode Theming
+
+- The application must seamlessly support both light and dark modes.
+- ALWAYS use Tailwind CSS CSS variables or `dark:` variants for colors.
+- Avoid hardcoding specific hex codes in components; rely on semantic Tailwind classes (e.g., `bg-background`, `text-foreground`, `border-border`) provided by the shadcn theme configuration.
+- Ensure all animations (Framer Motion, ReactBits) maintain visibility and contrast across both themes.
+
+## 4. Code Quality & Modern Standards
+
+- Write concise, efficient, and clean TypeScript code.
+- Strictly type all props, state, and API responses. Avoid using `any`.
+- Utilize modern React server components (RSC) by default. Only add `'use client'` directives at the very top of files that require browser APIs, interactivity (hooks), or Framer Motion animations.
+- Keep components small, modular, and single-purpose.
+
+## 5. Accessibility (a11y)
+
+- Follow WCAG accessibility guidelines.
+- Ensure semantic HTML (e.g., `<nav>`, `<main>`, `<article>`, `<footer>`).
+- Always include `aria-labels` or `sr-only` text for icon-only buttons (Lucide icons).
+- Maintain proper heading hierarchy (`h1` down to `h6`) without skipping levels.
+
+## 6. Animations
+
+- Keep animations purposeful and performant. Do not over-animate.
+- Prefer Framer Motion for scroll reveals, layout transitions, and interactive micro-interactions.
+- Use ReactBits snippets for complex visual flourishes (e.g., hero text, background effects), ensuring they do not block the main thread or negatively impact Lighthouse performance scores.

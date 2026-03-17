@@ -1,0 +1,232 @@
+.chroma-grid {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  --x: 50%;
+  --y: 50%;
+  --r: 220px;
+}
+
+.chroma-grid-inner {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), 320px);
+  grid-auto-rows: auto;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+@media (max-width: 1124px) {
+  .chroma-grid-inner {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
+    gap: 0.5rem;
+  }
+  .chroma-grid {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chroma-grid-inner {
+    grid-template-columns: 320px;
+    gap: 0.75rem;
+  }
+  .chroma-grid {
+    padding: 1rem;
+  }
+}
+
+.chroma-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border, #333);
+  transition: border-color 0.3s ease;
+  background: var(--card-gradient);
+
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(255, 255, 255, 0.3);
+}
+
+.chroma-card:hover {
+  border-color: var(--card-border);
+  background: linear-gradient(
+    165deg,
+    var(--muted) 0%,
+    color-mix(in oklch, var(--primary) 18%, var(--card)) 50%,
+    var(--card) 100%
+  );
+}
+
+.chroma-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    var(--spotlight-color),
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+}
+
+.chroma-card:hover::before {
+  opacity: 1;
+}
+
+.chroma-img-wrapper {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.chroma-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.chroma-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.chroma-info {
+  position: relative;
+  z-index: 1;
+  padding: 0.75rem 1rem;
+  color: var(--card-foreground, #fff);
+  font-family: system-ui, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 0.25rem;
+  column-gap: 0.75rem;
+}
+
+.chroma-info .chroma-name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--card-foreground, #fff);
+}
+
+.chroma-info .chroma-meta {
+  grid-column: 1 / -1;
+  font-size: 0.75rem;
+  color: var(--muted-foreground, #aaa);
+}
+
+.chroma-info .chroma-role,
+.chroma-info .chroma-handle {
+  color: var(--muted-foreground, #aaa);
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.chroma-info .chroma-location {
+  font-size: 0.75rem;
+  color: var(--muted-foreground, #aaa);
+}
+
+/*
+ * Overlay: matches ReactBits Chroma Grid (reactbits.dev/components/chroma-grid).
+ * Grayscale + dim everywhere; radial mask cuts a hole at (--x, --y) to reveal color.
+ */
+.chroma-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.001);
+  backdrop-filter: grayscale(1) brightness(0.78);
+  -webkit-backdrop-filter: grayscale(1) brightness(0.78);
+
+  /* Mask: transparent at center = hole (reveal color); white at edges = show grayscale */
+  mask-image: radial-gradient(
+    circle var(--r) at var(--x) var(--y),
+    transparent 0%,
+    transparent 15%,
+    rgba(0, 0, 0, 0.1) 30%,
+    rgba(0, 0, 0, 0.22) 45%,
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(0, 0, 0, 0.5) 75%,
+    rgba(0, 0, 0, 0.68) 88%,
+    white 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle var(--r) at var(--x) var(--y),
+    transparent 0%,
+    transparent 15%,
+    rgba(0, 0, 0, 0.1) 30%,
+    rgba(0, 0, 0, 0.22) 45%,
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(0, 0, 0, 0.5) 75%,
+    rgba(0, 0, 0, 0.68) 88%,
+    white 100%
+  );
+}
+
+/*
+ * Fade: covers the hole with grayscale when pointer leaves (inverse mask).
+ * Visible in center so hole is "filled"; opacity 1 when not hovering.
+ */
+.chroma-fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  background: rgba(0, 0, 0, 0.001);
+  backdrop-filter: grayscale(1) brightness(0.78);
+  -webkit-backdrop-filter: grayscale(1) brightness(0.78);
+
+  /* Mask: white at center = show grayscale in hole; transparent at edges */
+  mask-image: radial-gradient(
+    circle var(--r) at var(--x) var(--y),
+    white 0%,
+    white 15%,
+    rgba(255, 255, 255, 0.9) 30%,
+    rgba(255, 255, 255, 0.78) 45%,
+    rgba(255, 255, 255, 0.65) 60%,
+    rgba(255, 255, 255, 0.5) 75%,
+    rgba(255, 255, 255, 0.32) 88%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle var(--r) at var(--x) var(--y),
+    white 0%,
+    white 15%,
+    rgba(255, 255, 255, 0.9) 30%,
+    rgba(255, 255, 255, 0.78) 45%,
+    rgba(255, 255, 255, 0.65) 60%,
+    rgba(255, 255, 255, 0.5) 75%,
+    rgba(255, 255, 255, 0.32) 88%,
+    transparent 100%
+  );
+
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
