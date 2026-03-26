@@ -6,7 +6,7 @@ description: A comprehensive digital transformation and modern Next.js web appli
 liveUrl: https://rockstarslaverne.com/
 sourceUrl: https://github.com/codenamezeta/rockstars
 thumbnail: /imgs/rockstars/rockstars.jpg
-keywords: Next.js, React, TypeScript, UX/UI Design, API Integration, SEO
+keywords: API Integration, SEO, UX/UI Design, Next.js, React, TypeScript
 featuredOrder: 01
 ---
 

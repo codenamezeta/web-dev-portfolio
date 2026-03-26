@@ -126,8 +126,9 @@ export function PortfolioList({ items }: PortfolioListProps) {
     return list
   }, [items, categoryFilter, sortOrder])
 
-  const transition = reduceMotion
-    ? { duration: 0 }
+  const transition =
+    reduceMotion ?
+      { duration: 0 }
     : { duration: 0.35, ease: 'easeOut' as const }
   const staggerDelay = reduceMotion ? 0 : 0.08
 
@@ -210,7 +211,10 @@ export function PortfolioList({ items }: PortfolioListProps) {
         </p>
       </div>
 
-      <ul className='grid grid-cols-1 gap-6 md:grid-cols-2' role='list'>
+      <ul
+        className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3'
+        role='list'
+      >
         {filteredAndSorted.map((item, index) => (
           <motion.li
             key={item.slug}
@@ -225,12 +229,12 @@ export function PortfolioList({ items }: PortfolioListProps) {
             >
               <motion.div
                 whileHover={
-                  reduceMotion
-                    ? undefined
-                    : {
-                        y: -4,
-                        transition: { duration: 0.2 },
-                      }
+                  reduceMotion ? undefined : (
+                    {
+                      y: -4,
+                      transition: { duration: 0.2 },
+                    }
+                  )
                 }
                 whileTap={reduceMotion ? undefined : { scale: 0.99 }}
                 transition={{ duration: 0.2 }}
@@ -243,8 +247,8 @@ export function PortfolioList({ items }: PortfolioListProps) {
                     'focus-within:border-primary/40 focus-within:ring-2 focus-within:ring-ring/20',
                   )}
                 >
-                  <div className='relative aspect-[4/3] w-full overflow-hidden bg-muted'>
-                    {item.image ? (
+                  <div className='relative aspect-4/3 w-full overflow-hidden bg-muted'>
+                    {item.image ?
                       <Image
                         src={item.image}
                         alt=''
@@ -253,14 +257,13 @@ export function PortfolioList({ items }: PortfolioListProps) {
                         className='object-cover transition-transform duration-300 group-hover/card:scale-105'
                         unoptimized={item.image.startsWith('data:')}
                       />
-                    ) : (
-                      <div
+                    : <div
                         className='absolute inset-0 flex items-center justify-center text-muted-foreground/50'
                         aria-hidden
                       >
                         <span className='text-sm font-medium'>No image</span>
                       </div>
-                    )}
+                    }
                     <div
                       className='absolute inset-0 bg-linear-to-t from-card/90 via-card/20 to-transparent opacity-0 transition-opacity duration-300 group-hover/card:opacity-100'
                       aria-hidden

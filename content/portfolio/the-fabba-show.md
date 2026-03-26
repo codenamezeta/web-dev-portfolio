@@ -6,7 +6,7 @@ description: A complete architectural overhaul featuring a Sanity v3 upgrade, dy
 liveUrl: https://www.thefabbashow.com
 sourceUrl: https://github.com/michaelzeta/fabba-show
 image: /imgs/fabba/home-02.png
-keywords: Next.js, React, TypeScript, UX/UI Design, Sanity CMS, CSS Modules
+keywords: UX/UI Design, Sanity CMS, CSS Modules, Next.js, React, TypeScript
 featuredOrder: 02
 ---
 

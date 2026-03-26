@@ -54,8 +54,9 @@ export async function generateMetadata({
   return {
     title: `${item.title} | Portfolio`,
     description: item.description,
-    openGraph: item.image
-      ? { images: [{ url: item.image, alt: item.title }] }
+    openGraph:
+      item.image ?
+        { images: [{ url: item.image, alt: item.title }] }
       : undefined,
   }
 }
@@ -87,7 +88,7 @@ export default async function PortfolioItemPage({ params }: PageProps) {
 
           {/* Header */}
           <header className='flex flex-col gap-4 border-b border-border pb-6'>
-            <div className='flex flex-wrap items-center gap-2 text-sm text-muted-foreground'>
+            <div className='flex flex-wrap items-center gap-2 text-muted-foreground'>
               <Badge variant={getCategoryVariant(item.category)}>
                 {item.category}
               </Badge>
@@ -98,6 +99,17 @@ export default async function PortfolioItemPage({ params }: PageProps) {
             <h1 className='text-3xl font-bold tracking-tight text-foreground sm:text-4xl'>
               {item.title}
             </h1>
+            <div className='flex flex-wrap gap-2'>
+              {item.keywords?.map((keyword) => (
+                <Badge
+                  key={keyword}
+                  variant='outline'
+                  className='text-xs font-normal text-muted-foreground'
+                >
+                  {keyword}
+                </Badge>
+              ))}
+            </div>
             <div className='flex flex-wrap gap-3'>
               {item.liveUrl && (
                 <Button
@@ -145,11 +157,11 @@ export default async function PortfolioItemPage({ params }: PageProps) {
             )}
             aria-label='Case study'
           >
-            {item.content ? (
+            {item.content ?
               <MarkdownCaseStudy content={item.content} />
-            ) : item.caseStudy?.length ? (
+            : item.caseStudy?.length ?
               <CaseStudyContent blocks={item.caseStudy} />
-            ) : null}
+            : null}
           </section>
         </div>
       </main>

@@ -14,10 +14,13 @@ export default function ResumePage() {
   }, [])
 
   return (
-    <main className='container mx-auto relative bg-background flex flex-col-reverse justify-center lg:flex-row print:p-0'>
-      {/* Resume Content */}
-      <div className='min-h-screen px-4 lg:pb-16 lg:pt-12 sm:px-6 sm:pt-12 lg:px-8 print:min-h-0 print:m-0 print:p-0'>
-        <div className='relative max-w-4xl rounded-xl border border-border bg-card/80 px-6 py-8 shadow-2xl backdrop-blur-md sm:px-10 sm:py-10 lg:px-14 lg:py-12 print:max-w-none print:m-0 print:p-0 print:rounded-none print:border-0 print:bg-white print:shadow-none'>
+    <main className='container mx-auto relative bg-background flex flex-col-reverse justify-center lg:flex-row print:m-0 print:w-full print:max-w-none print:bg-white print:p-0'>
+      {/* Resume Content — full printable width; page margins come from @page in globals.css */}
+      <div className='min-h-screen w-full px-4 lg:pb-16 lg:pt-12 sm:px-6 sm:pt-12 lg:px-8 print:min-h-0 print:m-0 print:w-full print:max-w-none print:px-0 print:pt-0 print:pb-0'>
+        <div
+          id='resume-document'
+          className='relative mx-auto w-full max-w-4xl rounded-xl border border-border bg-card/80 px-6 py-8 shadow-2xl backdrop-blur-md sm:px-10 sm:py-10 lg:px-14 lg:py-12 print:mx-0 print:max-w-none print:w-full print:px-6 print:py-6 print:rounded-none print:border-0 print:bg-white print:shadow-none'
+        >
           {/* Gradient top bar (screen only) */}
           <div className='pointer-events-none absolute inset-x-0 top-0 h-1 bg-linear-to-r from-accent to-primary print:hidden' />
 
@@ -195,7 +198,7 @@ export default function ResumePage() {
             </section>
 
             {/* Technical Stack */}
-            <section className='group break-inside-avoid print:break-inside-avoid'>
+            <section className='group break-inside-avoid print:break-inside-avoid print:pt-6'>
               <SectionHeading>Technical Stack</SectionHeading>
               <div className='grid grid-cols-1 gap-2 text-sm sm:grid-cols-2 sm:text-base md:grid-cols-3 print:grid-cols-3 print:gap-1 print:text-[8pt]'>
                 {[
@@ -214,7 +217,7 @@ export default function ResumePage() {
                 ].map((skill) => (
                   <div
                     key={skill}
-                    className='flex items-center rounded-sm border border-border bg-muted/40 px-3 py-2 text-foreground shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:border-primary hover:bg-muted/70 print:border-slate-300 print:bg-slate-50 print:shadow-none print:hover:translate-y-0 print:p-2'
+                    className='flex items-center rounded-sm border border-border bg-muted/40 px-3 py-2 text-foreground shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:border-primary hover:bg-muted/70 print:border-border/50 print:bg-slate-50 print:text-black/70 print:shadow-none print:hover:translate-y-0 print:p-2'
                   >
                     <span className='mr-2 text-primary'>▹</span>
                     <span>{skill}</span>
@@ -296,7 +299,7 @@ export default function ResumePage() {
                 <li>
                   <a
                     href='https://a2zeta.com'
-                    className='inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-muted/70 print:border-0 print:bg-transparent print:shadow-none print:px-0 print:py-0 print:hover:translate-y-0'
+                    className='inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-muted/70 print:border-0 print:bg-transparent print:shadow-none print:px-0 print:py-0 print:hover:translate-y-0 print:text-black/70'
                   >
                     Web Development Portfolio{' '}
                     <ExternalLinkIcon className='size-4 print:hidden' />
@@ -308,7 +311,7 @@ export default function ResumePage() {
                 <li>
                   <a
                     href='https://github.com/codenamezeta'
-                    className='inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-muted/70 print:border-0 print:bg-transparent print:shadow-none print:px-0 print:py-0 print:hover:translate-y-0'
+                    className='inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-muted/70 print:border-0 print:bg-transparent print:shadow-none print:px-0 print:py-0 print:hover:translate-y-0 print:text-black/70'
                   >
                     GitHub Profile{' '}
                     <ExternalLinkIcon className='size-4 print:hidden' />
@@ -320,7 +323,7 @@ export default function ResumePage() {
                 <li>
                   <a
                     href='https://www.linkedin.com/in/codenamezeta/'
-                    className='inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-muted/70 print:border-0 print:bg-transparent print:shadow-none print:px-0 print:py-0 print:hover:translate-y-0'
+                    className='inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2 font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-muted/70 print:border-0 print:bg-transparent print:shadow-none print:px-0 print:py-0 print:hover:translate-y-0 print:text-black/70'
                   >
                     LinkedIn{' '}
                     <ExternalLinkIcon className='size-4 print:hidden' />

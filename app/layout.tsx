@@ -11,6 +11,23 @@ const outfit = Outfit({ subsets: ['latin'], variable: '--font-sans' })
 export const metadata: Metadata = {
   title: 'Michael Zeta | Full-Stack Web Developer',
   description: 'Portfolio of Michael Zeta, a Full-Stack Web Developer',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      {
+        url: '/imgs/favicons/favicon-32x32.png',
+        sizes: '32x32',
+        type: 'image/png',
+      },
+      {
+        url: '/imgs/favicons/favicon-16x16.png',
+        sizes: '16x16',
+        type: 'image/png',
+      },
+    ],
+    apple: [{ url: '/imgs/favicons/apple-touch-icon.png', sizes: '180x180' }],
+  },
+  manifest: '/imgs/favicons/site.webmanifest',
 }
 
 export default function RootLayout({
@@ -38,7 +55,7 @@ export default function RootLayout({
 
   return (
     <html
-      lang="en"
+      lang='en'
       className={cn('font-sans', outfit.variable)}
       suppressHydrationWarning
     >

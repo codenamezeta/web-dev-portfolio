@@ -5,30 +5,38 @@ const skillCategories = [
     items: [
       {
         label: 'Next.js & React',
-        description: 'Dynamic, server-rendered applications.',
+        description:
+          'Dynamic and highly performant server-rendered applications.',
       },
       {
-        label: 'Tailwind CSS',
-        description: 'Rapid, responsive, and maintainable styling.',
+        label: 'Modern CSS & Design Systems',
+        description:
+          'Tailwind CSS, Shadcn/UI, or custom CSS and design systems.',
       },
       {
-        label: 'Three.js',
-        description: 'Custom 3D graphics and interactive web experiences.',
+        label: 'Responsive Design',
+        description:
+          'Beautiful, premium designs on any device, no matter the screen size.',
       },
       {
-        label: 'UI/UX Design Principles',
-        description: 'Intuitive navigation and accessibility.',
+        label: 'UI/UX & Branding',
+        description:
+          'Superior experiences for your brand and products that feel engaging and intuitive.',
       },
+      // {
+      //   label: 'Accessibility',
+      //   description: 'WCAG compliance and inclusive design.',
+      // }
     ],
   },
   {
     title: 'Back-End & Data Management',
     tagline: 'Managing data and server-side logic.',
     items: [
-      { label: 'Payload CMS', description: 'Headless CMS and custom APIs.' },
       {
-        label: 'Python',
-        description: 'Scripting, backend logic, and versatile problem-solving.',
+        label: 'Headless CMS',
+        description:
+          'Payload, Keystone, Strapi, & WordPress integration with custom APIs.',
       },
       {
         label: 'Modern Databases',
@@ -37,6 +45,10 @@ const skillCategories = [
       {
         label: 'API Integration',
         description: 'Third-party services (REST & GraphQL).',
+      },
+      {
+        label: 'SEO & Analytics',
+        description: 'Google Analytics, Google Search Console, and more.',
       },
     ],
   },
@@ -53,8 +65,18 @@ const skillCategories = [
         description: 'Adapting to requirements and debugging systematically.',
       },
       {
-        label: 'Responsive Design',
-        description: 'Pixel-perfect rendering across all devices.',
+        label: 'Hosting & Deployment',
+        description:
+          'Vercel, Netlify, and CD/CI pipelines for seamless deployment.',
+      },
+      // {
+      //   label: 'Automation & CRM Integration',
+      //   description: 'Formspree, GHL, and more for seamless data flow.',
+      // },
+      {
+        label: 'Performance Optimization',
+        description:
+          'Load times, caching, and compression for fast performance.',
       },
     ],
   },
@@ -89,7 +111,7 @@ export function SkillsSection() {
       className='border-t border-border bg-background py-16 md:py-24'
       aria-labelledby='skills-heading'
     >
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='container mx-auto px-12'>
         <header className='mb-12 text-center md:mb-16'>
           <h2
             id='skills-heading'
@@ -120,11 +142,11 @@ export function SkillsSection() {
                 >
                   {items.map(({ label, description }) => (
                     <li key={label}>
-                      <span className='text-foreground'>
+                      <span className='text-foreground font-semibold'>
                         {label}
                         <br />
                       </span>{' '}
-                      <span className='text-muted-foreground'>
+                      <span className='text-muted-foreground font-light'>
                         {description}
                       </span>
                     </li>

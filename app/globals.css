@@ -96,7 +96,7 @@
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.268 0.007 34.298);
-  --muted-foreground: oklch(0.709 0.01 56.259);
+  --muted-foreground: oklch(0.8 0.01 56.259);
   --accent: oklch(0.62 0.16 345);
   --accent-foreground: oklch(0.984 0.014 180.72);
   --destructive: oklch(0.704 0.191 22.216);
@@ -127,5 +127,25 @@
   }
   html {
     @apply font-sans;
+  }
+
+  /*
+   * Print: dark mode uses a dark page background on <body>; browsers often
+   * print it as a solid frame around content. Reset the canvas and color-scheme
+   * so only real content (and @page margins) appear on paper/PDF.
+   */
+  @media print {
+    @page {
+      margin: 12mm;
+    }
+
+    * {
+      background: white !important;
+      color-scheme: light !important;
+    }
+
+    body {
+      background: white !important;
+    }
   }
 }

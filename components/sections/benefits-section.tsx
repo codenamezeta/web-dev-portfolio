@@ -4,17 +4,17 @@ const benefits = [
   {
     icon: TrendingUp,
     headline: 'Strategic, Business-Aligned Development',
-    copy: "You aren't just getting someone who writes code in a vacuum; you're getting a developer who understands how technical execution drives business objectives. Every application, UI choice, and database structure is engineered to provide measurable value, improve workflows, and scale with the company's goals.",
+    copy: "You aren't just getting someone who writes code in a vacuum, you're getting a developer who understands how technical execution drives business objectives. Every application, UI choice, and database structure is engineered to provide measurable value, improve workflows, and scale with the company's goals.",
   },
   {
     icon: Users2,
     headline: 'A Multiplier for Your Engineering Team',
-    copy: "Avoid the bottlenecks caused by siloed developers. You gain a highly communicative team member who excels at breaking down complex concepts, documenting processes, and fostering a collaborative environment. Whether it's pairing on a difficult bug or explaining a technical constraint to stakeholders, cross-team synergy is guaranteed.",
+    copy: "Avoid the bottlenecks caused by siloed developers. Gain a highly communicative team member who excels at breaking down complex concepts, documenting processes, and cultivating collaborative environments where teams thrive. Whether it's pairing on a difficult bug or explaining a technical constraint to stakeholders, cross-team synergy is guaranteed.",
   },
   {
     icon: Rocket,
     headline: 'Modern Architecture Built to Last',
-    copy: "Stop worrying about technical debt and outdated legacy code. You get robust, performant web applications built on modern, industry-standard frameworks. The focus is always on writing clean, maintainable logic that not only solves today's problems but is structurally sound enough to scale for tomorrow's traffic.",
+    copy: "Stop worrying about technical debt and outdated legacy code. Get robust, performant web applications built on modern, industry-standard frameworks. The focus is always on writing clean, maintainable logic that not only solves today's problems but is structurally sound enough to scale for tomorrow's traffic.",
   },
 ] as const
 
