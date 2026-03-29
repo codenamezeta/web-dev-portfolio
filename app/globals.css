@@ -124,6 +124,18 @@
   }
   body {
     @apply bg-background text-foreground;
+    ::selection {
+      @apply bg-accent text-primary-foreground;
+    }
+    ::-webkit-selection {
+      @apply bg-accent text-primary-foreground;
+    }
+    ::-moz-selection {
+      @apply bg-accent text-primary-foreground;
+    }
+    ::selection {
+      @apply bg-accent text-primary-foreground;
+    }
   }
   html {
     @apply font-sans;

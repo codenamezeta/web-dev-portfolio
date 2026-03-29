@@ -9,8 +9,9 @@ import { ThemeProvider } from '@/components/theme-provider'
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = {
-  title: 'Michael Zeta | Full-Stack Web Developer',
-  description: 'Portfolio of Michael Zeta, a Full-Stack Web Developer',
+  title: 'Michael Zeta • Full-Stack Web Developer',
+  description:
+    'Merging real-world business intuition with deep technical expertise in the React ecosystem. I build scalable, full-stack applications using Next.js and TypeScript, bringing a unique background in communication and project management to collaborative engineering teams.',
   icons: {
     icon: [
       { url: '/favicon.ico' },

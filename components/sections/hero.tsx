@@ -7,11 +7,11 @@ import { Button } from '@/components/ui/button'
 import { SplitText } from '@/components/ui/split-text'
 import { cn } from '@/lib/utils'
 
-const HERO_EYEBROW = 'Michael Zeta | Full-Stack Web Developer'
+const HERO_EYEBROW = 'Michael Zeta • Full-Stack Web Developer'
 const HERO_HEADING =
-  'Engineering Seamless Digital Experiences from Front to Back'
+  'Engineering Modern Web Architecture with a Team-First Mindset.'
 const HERO_BODY =
-  'I bring a unique blend of technical precision and cross-team communication to every project. Whether architecting backend logic or refining UI/UX details, I focus on writing maintainable code and building collaborative solutions that drive results.'
+  'Merging real-world business intuition with deep technical expertise in the React ecosystem. I build scalable, full-stack applications using Next.js and TypeScript, bringing a unique background in communication and project management to collaborative engineering teams.'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -21,9 +21,8 @@ const fadeUp = {
 export function Hero() {
   const reduceMotion = useReducedMotion()
 
-  const transition = reduceMotion
-    ? { duration: 0 }
-    : { duration: 0.5, ease: 'easeOut' as const }
+  const transition =
+    reduceMotion ? { duration: 0 } : { duration: 0.5, ease: 'easeOut' as const }
 
   const stagger = reduceMotion ? 0 : 0.08
   const delayChildren = reduceMotion ? 0 : 0.15
@@ -65,7 +64,7 @@ export function Hero() {
           }}
         >
           <motion.p
-            className='text-sm font-medium uppercase tracking-wider text-muted-foreground'
+            className='text-base font-medium uppercase tracking-wider text-muted-foreground'
             variants={fadeUp}
             transition={transition}
           >
@@ -77,7 +76,7 @@ export function Hero() {
               splitType='words'
               as='h1'
               id='hero-heading'
-              className='text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl md:text-4xl lg:text-5xl'
+              className='text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-3xl md:text-4xl xl:text-6xl'
               delay={reduceMotion ? 0 : 0.1}
               duration={0.4}
               staggerChildren={reduceMotion ? 0 : 0.03}
@@ -86,7 +85,7 @@ export function Hero() {
             />
           </motion.div>
           <motion.p
-            className='max-w-xl text-base leading-relaxed light:text-foreground dark:text-muted-foreground sm:text-lg'
+            className='max-w-3xl text-base leading-relaxed light:text-foreground dark:text-muted-foreground sm:text-xl'
             variants={fadeUp}
             transition={{ ...transition, delay: reduceMotion ? 0 : 0.35 }}
           >
@@ -98,7 +97,7 @@ export function Hero() {
             transition={{ ...transition, delay: reduceMotion ? 0 : 0.5 }}
           >
             <Button asChild size='lg' className='min-h-11 min-w-28'>
-              <Link href='/portfolio'>Portfolio</Link>
+              <Link href='/portfolio'>View Recent Projects</Link>
             </Button>
             <Button
               asChild
@@ -106,7 +105,7 @@ export function Hero() {
               size='lg'
               className='min-h-11 min-w-28'
             >
-              <Link href='/contact'>Contact Me</Link>
+              <Link href='/contact'>Let&apos;s Connect</Link>
             </Button>
           </motion.div>
         </motion.div>

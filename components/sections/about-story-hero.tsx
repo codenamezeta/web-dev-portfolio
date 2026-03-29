@@ -17,8 +17,8 @@ export function AboutStoryHero() {
       aria-labelledby='about-story-heading'
     >
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='grid grid-cols-1 gap-10 md:gap-12 lg:grid-cols-12 lg:items-start'>
-          <div className='order-2 lg:order-1 lg:col-span-5'>
+        <div className='grid grid-cols-1 gap-10 md:gap-12 lg:grid-cols-12 xl:items-start'>
+          <div className='order-2 lg:col-span-4 xl:order-1 xl:col-span-5'>
             <div className='relative aspect-9/16 w-full overflow-hidden rounded-2xl border border-primary bg-muted'>
               <Grainient
                 color1='#174c47'
@@ -54,7 +54,7 @@ export function AboutStoryHero() {
             </div>
           </div>
 
-          <div className='order-1 flex flex-col gap-6 lg:order-2 lg:col-span-7'>
+          <div className='order-1 flex flex-col gap-6 lg:col-span-8 xl:order-2 xl:col-span-7'>
             <header className='space-y-3'>
               <p className='text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground'>
                 The Story So Far
@@ -67,9 +67,11 @@ export function AboutStoryHero() {
               </h1>
             </header>
 
-            <div className='space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl md:leading-relaxed'>
+            <div className='text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl md:leading-relaxed'>
               {storyParagraphs.map((paragraph) => (
-                <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+                <p className='mt-0 mb-2' key={paragraph.slice(0, 24)}>
+                  {paragraph}
+                </p>
               ))}
             </div>
           </div>
