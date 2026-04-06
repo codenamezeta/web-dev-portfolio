@@ -6,6 +6,8 @@ import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { ThemeProvider } from '@/components/theme-provider'
 
+import { Analytics } from '@vercel/analytics/next'
+
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = {
@@ -67,6 +69,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Analytics />
         <ThemeProvider>
           <SiteNav />
           {children}
