@@ -24,7 +24,7 @@ const faqItems = [
   {
     question: 'What does your preferred tech stack look like?',
     answer:
-      "I do my best work in the React ecosystem, specifically building with Next.js and TypeScript, often paired with headless CMSs like Payload or Sanity. I also have a solid foundation in Python, C++, and database management (Postgres, Supabase, Firebase). While I have plenty of past experience navigating the wild world of WordPress, my heart truly belongs in a modern IDE like VSCode or Cursor. I'm an absolute sponge for new tech, so exploring frameworks like Solid.js and Svelte is next on my hit list.",
+      "I do my best work in the React ecosystem, specifically building with Next.js and TypeScript, often paired with headless CMSs like Payload or Sanity. I also have a solid foundation in Python, C++, and database management (Postgres, Supabase, Firebase). While I have plenty of past experience navigating the wild world of WordPress, my heart truly belongs in a modern IDE like VS Code or Cursor—where I use agentic AI-assisted workflows every day to design, iterate, and ship features. I'm an absolute sponge for new tech, so exploring frameworks like Solid.js and Svelte is next on my hit list.",
   },
   {
     question:

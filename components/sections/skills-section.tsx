@@ -57,6 +57,11 @@ const skillCategories = [
     tagline: 'Formal education and professional workflow—beyond tutorial code.',
     items: [
       {
+        label: 'Cursor & AI-Assisted Development',
+        description:
+          'Daily TypeScript workflow with Cursor and agentic coding tools.',
+      },
+      {
         label: 'Version Control (GitHub)',
         description: 'Clean commit histories and collaborative workflows.',
       },
