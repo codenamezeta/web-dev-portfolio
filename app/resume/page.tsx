@@ -93,7 +93,12 @@ export default function ResumePage() {
                 <strong className='font-semibold text-foreground print:text-black'>
                   Next.js, TypeScript, Tailwind CSS, and Supabase
                 </strong>
-                . Passionate about clean UI components, seamless API
+                . Daily hands-on experience with{' '}
+                <strong className='font-semibold text-foreground print:text-black'>
+                  Cursor and agentic AI-assisted development
+                </strong>{' '}
+                to design, iterate, and ship production TypeScript code.
+                Passionate about clean UI components, seamless API
                 integrations, and contributing to fast-moving, product-led
                 startups.
               </p>
@@ -128,6 +133,15 @@ export default function ResumePage() {
                     Manage the complete software development lifecycle (SDLC)
                     from UI wireframing to backend deployment, utilizing Agile
                     methodologies to ship real features on tight deadlines.
+                  </li>
+                  <li>
+                    Build and iterate on TypeScript applications using{' '}
+                    <strong className='font-semibold text-foreground print:text-black'>
+                      Cursor
+                    </strong>{' '}
+                    and agentic coding tools—collaborating with AI assistants
+                    to scaffold features, debug issues, and accelerate delivery
+                    without sacrificing code quality.
                   </li>
                 </ul>
               </JobCard>
@@ -204,6 +218,7 @@ export default function ResumePage() {
                 {[
                   'Next.js & React',
                   'TypeScript / JavaScript',
+                  'Cursor & Agentic AI Tools',
                   'Tailwind CSS',
                   'Supabase & PostgreSQL',
                   'SEO & JSON-LD',

@@ -33,7 +33,7 @@ const journeyItems = [
     timeframe: 'Present',
     where: 'Chaffey College (Transferring to Cal Poly Pomona)',
     milestone:
-      'Currently backing up a decade of self-taught, real-world development experience with formal Computer Science education. Maintaining a 3.94 GPA while mastering the React ecosystem (Next.js, TypeScript, Tailwind) to prepare for a full-time collaborative role.',
+      'Currently backing up a decade of self-taught, real-world development experience with formal Computer Science education. Maintaining a 3.94 GPA while mastering the React ecosystem (Next.js, TypeScript, Tailwind) and building daily with Cursor and agentic coding tools to prepare for a collaborative engineering role.',
   },
 ] as const
 
