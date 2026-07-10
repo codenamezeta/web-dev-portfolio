@@ -7,7 +7,7 @@ liveUrl: https://www.thefabbashow.com
 sourceUrl: https://github.com/michaelzeta/fabba-show
 image: /imgs/fabba/home-02.png
 keywords: UX/UI Design, Sanity CMS, CSS Modules, Next.js, React, TypeScript
-featuredOrder: 02
+featuredOrder: 03
 ---
 
 ## Executive Summary
@@ -30,7 +30,7 @@ To solve these challenges, I executed a ground-up rebuild focusing on modern fea
 
 I upgraded the backend architecture to Sanity v3, leveraging the new Studio customization features to strip away unnecessary technical bloat. I engineered a highly streamlined, custom-tailored editor interface designed specifically for the Director's workflow. This allowed her to easily update complex event data, upload media, and publish announcements without ever needing to touch code or navigate confusing schema structures.
 
-![Sanity Dashboard for Rich Text Editing and Event Management](/imgs/fabba/sanity-01.png)
+Sanity Dashboard for Rich Text Editing and Event Management
 
 ### 2. Custom Theming & UI Identity
 
@@ -93,7 +93,7 @@ The primary business goal of the platform is to drive event attendance. The v1 s
 - **Standalone Event Pages:** Every single tour stop now generates its own dynamic, dedicated landing page.
 - **Rich Editorial Features:** These event pages act as mini-blogs. Using Sanity's Portable Text, the client can now embed promotional videos, insert photo galleries, and write rich-text editorial content specific to that single venue, providing fans with all the hype and logistics they need to purchase tickets.
 
-![Newly Designed Blue & Gold Theme](/imgs/fabba/home-01.png)
+Newly Designed Blue & Gold Theme
 
 ### 4. New "Announcements" Content Hub
 

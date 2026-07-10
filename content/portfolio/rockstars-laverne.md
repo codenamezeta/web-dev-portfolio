@@ -7,7 +7,7 @@ liveUrl: https://rockstarslaverne.com/
 sourceUrl: https://github.com/codenamezeta/rockstars
 thumbnail: /imgs/rockstars/rockstars.jpg
 keywords: API Integration, SEO, UX/UI Design, Next.js, React, TypeScript
-featuredOrder: 01
+featuredOrder: 02
 ---
 
 ## Executive Summary
