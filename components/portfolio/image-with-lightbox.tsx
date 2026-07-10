@@ -41,7 +41,7 @@ export function ImageWithLightbox({
               alt={alt}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
-              className="object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+              className="object-cover object-top transition-transform duration-200 group-hover:scale-[1.02]"
               priority={priority}
             />
           </div>
@@ -61,13 +61,13 @@ export function ImageWithLightbox({
           <DialogTitle className="sr-only">
             {alt || "Enlarged image"}
           </DialogTitle>
-          {/* Native img so JPG and all formats display; fills 90vw×90vh so image scales to full width or height. Click/tap anywhere (including image) closes. */}
-          <div className="w-[90vw] h-[90vh] min-w-0 min-h-0 flex items-center justify-center cursor-pointer">
+          {/* Native img so JPG and all formats display at full width; tall images scroll within 90vh. Click/tap anywhere closes. */}
+          <div className="w-[90vw] max-h-[90vh] min-w-0 overflow-y-auto overflow-x-hidden overscroll-y-contain cursor-pointer">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={src}
               alt={alt}
-              className="max-w-full max-h-full w-full h-full object-contain pointer-events-none select-none"
+              className="block w-full h-auto pointer-events-none select-none"
               draggable={false}
             />
           </div>

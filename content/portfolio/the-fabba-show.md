@@ -4,7 +4,7 @@ category: Client
 publishedAt: 2026-03-13
 description: A complete architectural overhaul featuring a Sanity v3 upgrade, dynamic event routing, and a custom UI tailored to the band's iconic stage aesthetic.
 liveUrl: https://www.thefabbashow.com
-sourceUrl: https://github.com/michaelzeta/fabba-show
+sourceUrl: https://github.com/codenamezeta/thefabbashow
 image: /imgs/fabba/home-02.png
 keywords: UX/UI Design, Sanity CMS, CSS Modules, Next.js, React, TypeScript
 featuredOrder: 03
@@ -15,6 +15,8 @@ featuredOrder: 03
 Following the success of the initial FABBA Show web platform, I spearheaded a complete v2 overhaul to address the band's scaling marketing needs and to drastically improve the backend content management experience.
 
 As the former bassist for the act, I worked closely with the show's Director to translate her exacting, highly specific brand vision into a performant digital reality. This overhaul focused on three primary pillars: engineering a bespoke UI that matched their real-world aesthetic, restructuring the event architecture to drive higher ticket sales, and streamlining a complex headless CMS into a foolproof, intuitive dashboard for a non-technical stakeholder.
+
+![The FABBA Show Website](/imgs/fabba/home-01.png)
 
 ## The Challenge: Empowering a Non-Technical Stakeholder
 
@@ -86,6 +88,8 @@ To meet the client's exact branding requests, I developed a robust, custom desig
 }
 ```
 
+![Newly Designed Blue & Gold Theme](/imgs/fabba/events-01.png)
+
 ### 3. Dynamic Event Routing & Editorial Architecture
 
 The primary business goal of the platform is to drive event attendance. The v1 site utilized a simple, flat master list for upcoming shows. To optimize for conversions and SEO, I completely re-architected the routing system:
@@ -93,7 +97,7 @@ The primary business goal of the platform is to drive event attendance. The v1 s
 - **Standalone Event Pages:** Every single tour stop now generates its own dynamic, dedicated landing page.
 - **Rich Editorial Features:** These event pages act as mini-blogs. Using Sanity's Portable Text, the client can now embed promotional videos, insert photo galleries, and write rich-text editorial content specific to that single venue, providing fans with all the hype and logistics they need to purchase tickets.
 
-Newly Designed Blue & Gold Theme
+![Sanity CMS](/imgs/fabba/sanity-01.png)
 
 ### 4. New "Announcements" Content Hub
 
@@ -151,6 +155,8 @@ export default async function Page({ params: paramsPromise }: EventPageProps) {
   )
 }
 ```
+
+![Post Page](/imgs/fabba/post-02.png)
 
 ## Business Impact & Reflections
 

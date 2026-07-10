@@ -4,7 +4,7 @@ category: Personal
 publishedAt: 2026-07-01
 description: A high-performance, immersive web application and headless CMS built for the independent modern rock artist The Second Messenger.
 liveUrl: https://thesecondmessenger.com
-sourceUrl: https://github.com/codenamezeta/the-second-messenger
+sourceUrl: https://github.com/codenamezeta/thesecondmessenger
 thumbnail: /imgs/tsm/hero.png
 keywords: API Integration, SEO, UX/UI Design, Next.js, React, TypeScript
 featuredOrder: 01
@@ -19,6 +19,8 @@ In the modern music ecosystem, independent artists face an existential platform 
 **The Second Messenger** is an immersive digital ecosystem, direct-to-consumer monetization platform, and custom headless CMS tailored specifically for an independent modern rock campaign. Designed around a striking sci-fi tactical data terminal and heads-up display (HUD) aesthetic, the application bypasses third-party middlemen to drive direct monetization through premium asset vaults, gamified memberships, and custom-tailored listening environments.
 
 By treating an artist project like an early-stage startup, this platform pairs **cutting-edge web engineering** (Next.js 16 App Router, React 19, Payload CMS v3, Cloudflare R2, WebAssembly) with **sharp product strategy** (Role-Based Access Control, serverless edge cost optimization, and automated asset pipelining). The result demonstrates how custom software can restore operational autonomy and financial sustainability to independent creative operations.
+
+![The Second Messenger Website](/imgs/tsm/hero.png)
 
 ## 🏗️ The Architectural Blueprint: Unified, Monolithic Headless Power
 
@@ -147,6 +149,8 @@ export async function syncSongAudioTags(payload: Payload, songId: number): Promi
 
 ```
 
+![Song data Payload admin area.](/imgs/tsm/song-admin.png)
+
 ## 🎨 Art Direction: The Brutalist Cyber-Terminal Design System
 
 Moving far away from standard template kits, the visual canvas functions under a unified design brief: **The Tactical Command Deck HUD**.
@@ -155,6 +159,8 @@ Moving far away from standard template kits, the visual canvas functions under a
 - **The Atmospheric Canvas:** Deep, canvas-style blacks (`bg-background`) contrasted with glowing interactive accents using precise drop-shadow structures that replicate modern CRT vector luminescence.
 - **Typographic Gradients:** Clean, monospaced system font arrays (simulating low-level system logs) provide high structural readability alongside bold, tightly tracking header configurations.
 - **Dynamic Data Decryption:** Text modules utilize custom `<DecryptedText />` elements. On scroll triggers or interaction boundaries, text modules programmatically generate randomized string cycles before settling into the decoded textual output, simulating active real-time data feeds.
+
+![Bio page](/imgs/tsm/bio.png)
 
 ## 📈 Business Outcomes & Technical Product Takeaways
 
